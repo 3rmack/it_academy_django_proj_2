@@ -1,0 +1,12 @@
+{% extends "basis.html" %}
+{% block title %}Table{% endblock %}
+{% block content %}
+    <table border="1">
+        {% for item in context %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.length }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
