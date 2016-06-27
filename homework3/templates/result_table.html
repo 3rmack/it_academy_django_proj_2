@@ -1,0 +1,16 @@
+{% extends "basis.html" %}
+{% block title %}Search results{% endblock %}
+{% block content %}
+    <table border="1">
+        {% for i in context %}
+            <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.favourite_color }}</td>
+                <td>{{ i.email }}</td>
+                <td>{{ i.height }}</td>
+                <td>{{ i.weight }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'search_form' %}">Back</a>
+{% endblock %}

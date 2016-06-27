@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'homework2'
+    'homework2',
+    'homework3'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -80,6 +81,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'homework3_db': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'C:\work\Python_Projects\it_academy_django_proj_2\homework3_db',
     }
 }
 
