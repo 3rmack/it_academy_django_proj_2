@@ -11,5 +11,5 @@ class StreetForm(forms.Form):
 
 
 class SearchForm(forms.Form):
-    city_name_search = forms.CharField(label='City name', max_length=50, required=False)
-    street_name_search = forms.CharField(label='Street name', max_length=50, required=False)
+    city_name_search = forms.CharField(label='City name', max_length=50, required=True)
+    street_name_search = forms.CharField(label='Street name', max_length=50, required=True)

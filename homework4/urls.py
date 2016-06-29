@@ -1,4 +1,4 @@
-from django.conf.urls import url, include
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'city_form_post$', views.city_form_post, name='city_form_post'),
     url(r'street_form$', views.street_form, name='street_form'),
     url(r'street_form_post$', views.street_form_post, name='street_form_post'),
-    url(r'search_form$', views.search_form, name='search_form'),
-    # url(r'search_form_post$', views.search_form_post, name='search_form_post'),
+    url(r'search_form2$', views.search_form2, name='search_form2'),
+    url(r'search_form_post2$', views.search_form_post2, name='search_form_post2'),
 
 ]

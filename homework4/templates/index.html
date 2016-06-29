@@ -1,6 +1,7 @@
 {% extends "basis.html" %}
 {% block title %}First page{% endblock %}
 {% block content %}
-    <p><a href="{% url 'city_form' %}">Input data</a></p>
-    <p><a href="{% url 'search_form' %}">Search data</a></p>
+    <p><a href="{% url 'city_form' %}">Add city</a></p>
+    <p><a href="{% url 'street_form' %}">Add street</a></p>
+    <p><a href="{% url 'search_form2' %}">Search</a></p>
 {% endblock %}

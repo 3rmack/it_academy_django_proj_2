@@ -4,14 +4,14 @@ from django.db import models
 
 
 class Cities(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
 
     def __unicode__(self):
         return '{0}'.format(self.name)
 
 
 class Streets(models.Model):
-    city = models.OneToOneField(Cities)
+    city = models.ForeignKey(Cities)
     name = models.CharField(max_length=100)
     length = models.IntegerField(null=True)
 

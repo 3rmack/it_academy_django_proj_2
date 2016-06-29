@@ -6,9 +6,11 @@
     <body>
         <form method = "POST" action="http://127.0.0.1:8000/homework4/street_form_post">
             {{ street_form.as_p }}
-            <input type="hidden" name="city_id" value="{{ city.id }}">
-            <input type="hidden" name="city_name" value="{{ city.name }}">
-{#            <input type="hidden" value="{{ city.id }}">#}
+            <select name="city_name">
+                {% for city in cities %}
+                    <option value="{{ city }}">{{ city }}</option>
+                {% endfor %}
+            </select>
             <input type="submit" value="Send">
         </form>
     </body>
