@@ -1,0 +1,19 @@
+{% extends "homework5_basis.html" %}
+{% block title %}View workers{% endblock %}
+{% block content %}
+    <table border="1">
+        <tr>
+            <td>First name</td>
+            <td>Last name</td>
+            <td>Birth year</td>
+        </tr>
+        {% for worker in workers %}
+            <tr>
+                <td>{{ worker.first_name }}</td>
+                <td>{{ worker.last_name }}</td>
+                <td>{{ worker.birth_year }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{% url 'add_worker' %}">Add worker</a></p>
+{% endblock %}

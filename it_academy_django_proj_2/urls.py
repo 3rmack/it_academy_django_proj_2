@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^homework2/', include('homework2.urls')),
     url(r'^homework3/', include('homework3.urls')),
     url(r'^homework4/', include('homework4.urls')),
+    url(r'^homework5/', include('homework5.urls')),
     url(r'^admin/', admin.site.urls),
 ]
