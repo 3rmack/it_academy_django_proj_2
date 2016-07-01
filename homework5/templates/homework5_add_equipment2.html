@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form method = "POST" action="{% url 'add_equipment2' %}">
+            {{ equipment_form.as_p }}
+            Select owner:
+            <select name="owner">
+                {% for worker in workers %}
+                    <option value="{{ worker.id }}">{{ worker.last_name }}</option>
+                {% endfor %}
+            </select>
+        <p><input type="submit" value="Send"></p>
+        </form>
+        <p><a href="{% url 'index' %}">Finish</a></p>
+    </body>
+</html>

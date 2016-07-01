@@ -1,0 +1,21 @@
+{% extends "homework5_basis.html" %}
+{% block title %}View workers{% endblock %}
+{% block content %}
+    <table border="1">
+        <tr>
+            <td>Equipment</td>
+            <td>Inventory ID</td>
+            <td>Cost</td>
+{#            <td>Owner</td>#}
+        </tr>
+        {% for equipment in equipments %}
+            <tr>
+                <td>{{ equipment.equipment_name }}</td>
+                <td>{{ equipment.inventory_id }}</td>
+                <td>{{ equipment.cost }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{% url 'add_equipment2' %}">Add equipment</a></p>
+    <p><a href="{% url 'index' %}">Finish</a></p>
+{% endblock %}

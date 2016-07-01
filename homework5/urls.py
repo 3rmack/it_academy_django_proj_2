@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'add_worker$', views.add_worker, name='add_worker'),
     url(r'view_equipment$', views.view_equipment, name='view_equipment'),
     url(r'add_equipment$', views.add_equipment, name='add_equipment'),
+    url(r'add_equipment2$', views.add_equipment2, name='add_equipment2'),
 ]
