@@ -1,0 +1,18 @@
+{% extends "homework6_basis.html" %}
+{% block title %}View connections{% endblock %}
+{% block content %}
+    <table border="1">
+        <tr>
+            <td>Article</td>
+            <td>Section</td>
+        </tr>
+        {% for connection in connections %}
+            <tr>
+                <td>{{ connection.article.article_header }}</td>
+                <td>{{ connection.section.section_header }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{% url 'add_connections' %}">Add connections</a></p>
+    <p><a href="{% url 'index' %}">Finish</a></p>
+{% endblock %}

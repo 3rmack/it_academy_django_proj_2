@@ -1,0 +1,20 @@
+{% extends "homework6_basis.html" %}
+{% block title %}View articles{% endblock %}
+{% block content %}
+    <table border="1">
+        <tr>
+            <td>Header</td>
+            <td>Contents</td>
+            <td>Author</td>
+        </tr>
+        {% for article in articles %}
+            <tr>
+                <td>{{ article.article_header }}</td>
+                <td>{{ article.contents }}</td>
+                <td>{{ article.author }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{% url 'add_article' %}">Add article</a></p>
+    <p><a href="{% url 'index' %}">Finish</a></p>
+{% endblock %}

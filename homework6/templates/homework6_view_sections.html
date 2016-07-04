@@ -1,0 +1,18 @@
+{% extends "homework6_basis.html" %}
+{% block title %}View sections{% endblock %}
+{% block content %}
+    <table border="1">
+        <tr>
+            <td>Header</td>
+            <td>Age qualification</td>
+        </tr>
+        {% for section in sections %}
+            <tr>
+                <td>{{ section.section_header }}</td>
+                <td>{{ section.age_qualification }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{% url 'add_section' %}">Add section</a></p>
+    <p><a href="{% url 'index' %}">Finish</a></p>
+{% endblock %}
